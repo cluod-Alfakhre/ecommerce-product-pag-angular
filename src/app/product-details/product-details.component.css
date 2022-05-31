@@ -1,0 +1,117 @@
+.text{
+    display: grid;
+    gap: 1.3rem;
+    padding-bottom: 30px;
+}
+.text .company-name{
+    font-size: 1rem;
+    font-weight: bold;
+    color:  hsl(26, 100%, 55%);
+}
+.text h2{
+    font-size: 42px;
+}
+.text p{
+    margin-top: 10px;
+    font-size: 18px;
+    color: hsl(219, 9%, 45%);
+}
+.price{
+    display: grid;
+    gap: 10px;
+    padding-bottom: 2rem;
+}
+.price .current-price{
+    color: hsl(220, 13%, 13%);
+    position: relative;
+    width: fit-content;
+}
+.price .current-price::after{
+    content: '50%';
+    position: absolute;
+    color: hsl(26, 100%, 55%);
+    font-size: 16px;
+    background-color: hsl(25, 100%, 94%);
+    width: 35px;
+    padding: 3px;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 10px);
+}
+.price .previous-price{
+    color: hsl(220, 14%, 75%);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.add-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+}
+.add-item .controle{
+    background-color: hsl(223, 64%, 98%);
+    width: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    text-align: center;
+    border-radius: 13px;
+}
+.controle div{
+    padding: 0 15px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+.add-item .add-to-cart{
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border-radius: 13px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+    cursor: pointer;
+}
+.add-item .add-to-cart:hover{
+    background-color: hsl(26, 100%, 60%);
+}
+.add-item .add-to-cart p{
+    flex: 1;
+    font-size: 18px;
+}
+
+.add-item .add-to-cart svg path{
+    fill: white;
+}
+@media(max-width:768px){
+    .details-container{
+        padding: 0 1rem;
+    }
+    .text{
+        gap: 1rem;
+    }
+    .text .company-name{
+
+    }
+    .text h2{
+        font-size: 30px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .price{
+        grid-template-columns: 1fr auto; 
+    }
+    .add-item{
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+    .add-item .controle{
+        width: 100%;
+        height: 60px;
+    }
+}

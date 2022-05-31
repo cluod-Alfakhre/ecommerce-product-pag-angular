@@ -1,0 +1,18 @@
+
+.container{
+    max-width: 1142px;
+    margin-inline: auto;
+    margin-top: 113px;
+    padding: 90px 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+@media(max-width:768px){
+    .container{
+        grid-template-columns: 1fr;
+        padding: 1rem 0 3rem;
+    }
+}

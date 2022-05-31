@@ -1,0 +1,5 @@
+main{
+    min-height: 100vh;
+    display: grid;
+    grid-column: auto;
+}

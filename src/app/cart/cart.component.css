@@ -1,0 +1,98 @@
+.cart{
+    position: relative;
+}
+
+.cart-icon{
+    cursor: pointer;
+    position: relative;
+}
+.items-length{
+    position: absolute;
+    bottom: 57%;
+    left: 55%;
+    border-radius: 45%;
+    font-size: 11px;
+    font-weight: bold;
+    width: 20px;
+    height: 16px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.cart-icon svg{
+    transition: .2s;
+}
+.cart-icon svg:hover path{
+    fill: hsl(220, 13%, 13%);
+}
+
+.cart-items{
+    position: fixed;
+    min-height: 175px;
+    top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 370px;
+    border-radius: 12px;
+    z-index: 1;
+}
+h2{
+    color: hsl(220, 13%, 13%);
+    font-size: 18px;
+    padding: 1rem;
+}
+.items-wrap{
+    min-height: inherit;
+    border-top: solid 1px hsl(220, 14%, 75%);
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+.items-wrap p{
+    font-weight: bold;
+    color:  hsl(220, 14%, 75%);
+    text-align: left;
+}
+.empty p{
+    text-align: center;
+    color:  hsl(219, 9%, 45%);
+    font-size: 18px;
+}
+.item{
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+}
+.item img{
+    width: 55px;
+    border-radius: 4px;
+}
+.item .price{
+    padding-top: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.item .price span{
+    color: hsl(220, 13%, 13%);
+    font-weight: bold;
+}
+.delete{
+    cursor: pointer;
+}
+@media(max-width:768px){
+    .cart-icon svg{
+        transform: scale(.95);
+    }
+    .cart-items{
+        width: calc(100% - 20px);
+    }
+}

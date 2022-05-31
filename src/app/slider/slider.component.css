@@ -1,0 +1,105 @@
+.slider-container{
+    overflow: hidden;
+    display: grid;
+    gap: 22px;
+    align-items: center;
+    justify-content: center;
+}
+.slider-container .the-screen{
+    overflow: hidden;
+    width: 427px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.slider-container.active{
+    position: fixed;
+    background-color: rgb(34 33 33 / 77%);
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+.screen-wrapper .close{
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 52px;
+    right: 304px;
+}
+.screen-wrapper .close svg path{
+    fill: #d1d1d1;
+}
+.slider-container.active .close{
+    display: block;
+}
+.slider-container.active .the-screen{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+.slider-container.active .the-screen .previous,.slider-container.active .the-screen .next{
+    display: grid;
+}
+.previous,.next{
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+.previous{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+.slider-container .the-screen .img-wrapper{
+    display: flex;
+    width: 100%;
+    transition: .2s;
+}
+.slider-container .thumbnails{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.slider-container.active .thumbnails{
+    position: relative;
+    bottom: -90px;
+}
+.slider-container .thumbnails img{
+    width: 70px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+.slider-container .thumbnails img:hover{
+    filter: opacity(85%);
+}
+.slider-container .thumbnails img.active{
+    border: solid 2px hsl(26, 100%, 55%);
+    filter: opacity(50%);
+}
+@media(max-width:768px){
+    .slider-container .the-screen{
+        width: 100%;
+        border-radius: 0;
+    }
+    .slider-container .thumbnails{
+        display: none;
+    }
+    .previous,.next{
+        display: grid;
+    }
+}

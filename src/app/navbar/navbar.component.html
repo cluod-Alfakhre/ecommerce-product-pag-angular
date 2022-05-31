@@ -1,0 +1,25 @@
+<nav>
+    <div class="logo">
+        <img src="assets/images/logo.svg" alt="logo">
+    </div>
+
+    <ul class="list">
+        <div class="menu" (click)='toggleList(theList,true)'>
+            <img src="assets\images\icon-menu.svg" alt="menu-icon">
+        </div>
+        <div class="list-items-wrapper" #theList>
+            <div class="close" (click)='toggleList(theList,false)' >
+                <img src="assets\images\icon-close.svg" alt="close">
+            </div>
+            <li class="item">Collections</li>
+            <li class="item">Men</li>
+            <li class="item">Women</li>
+            <li class="item">About</li>
+            <li class="item">Contact</li>
+        </div>
+    </ul>
+    <app-cart class="cart"></app-cart>
+    <div class="avatar-img">
+        <img src="assets/images/image-avatar.png" alt="avatar">
+    </div>
+</nav>
