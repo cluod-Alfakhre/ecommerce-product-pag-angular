@@ -32,8 +32,8 @@
 .cart-items{
     position: fixed;
     min-height: 175px;
-    top: 64px;
-    left: 50%;
+    top: 90px;
+    left: 76%;
     transform: translateX(-50%);
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -93,6 +93,8 @@ h2{
         transform: scale(.95);
     }
     .cart-items{
+        top: 64px;
+        left: 50%;
         width: calc(100% - 20px);
     }
 }
