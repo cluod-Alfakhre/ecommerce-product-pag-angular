@@ -83,6 +83,7 @@ nav::after{
 
     .list{
         order: 1;
+        height: auto;
     }
     .list .menu{
         display: block;
